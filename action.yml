@@ -1,4 +1,4 @@
-name: "saludo"
+name: "Tarea"
 description: "Un saludo personalizado con github actions"
 inputs:
   name:
