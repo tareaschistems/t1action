@@ -1,0 +1,12 @@
+name: "saludo"
+description: "Un saludo personalizado con github actions"
+inputs:
+  name:
+    description: "El nombre de la persona a saludar"
+    required: true
+  secrets:
+    description: "Los secretos a utilizar en el saludo"
+    required: false
+runs:
+  using: "node20"
+  main: "dist/index.js"
