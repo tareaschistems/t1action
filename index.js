@@ -6,7 +6,6 @@ try {
     const apellido = core.getInput('apellido');
     const name = core.getInput('name');
     const secrets = core.getInput('secrets');
-    edad = edad - 18;
     console.log(`Hello ${name} ${apellido} tu edad ${edad}!`);
     if (edad >= 18) {
         edadMayoria = edad -18;
@@ -16,6 +15,7 @@ try {
     } else {
         edadMayoria = 1;
         edadTranscurrida = edad;
+        console.log(`Todavia no cumple la mayoria de edad, tiene ${edad} años`);
     }
     console.log(`Your secret is ${secrets}!`)
 } catch (error) {
