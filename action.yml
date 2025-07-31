@@ -7,6 +7,12 @@ inputs:
   secrets:
     description: "Los secretos a utilizar en el saludo"
     required: false
+  apellido: 
+    description: "El apellido de la persona a saludar"
+    required: true
+  edad:
+    description: "La edad de la persona a saludar"
+    required: true
 runs:
   using: "node20"
   main: "dist/index.js"
