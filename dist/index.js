@@ -27557,9 +27557,24 @@ module.exports = parseParams
 var __webpack_exports__ = {};
 const core = __nccwpck_require__(7484);
 try {
+    var edadMayoria = 0;
+    var edadTranscurrida = 0;
+    const edad = core.getInput('edad');
+    const apellido = core.getInput('apellido');
     const name = core.getInput('name');
     const secrets = core.getInput('secrets');
-    console.log(`Hello ${name}!`);
+    edad = edad - 18;
+    console.log(`Hello ${name} ${apellido} tu edad ${edad}!`);
+    if (edad >= 18) {
+        edadMayoria = edad -18;
+        edadTranscurrida = 100 - edad;
+        console.log(`Años con mayoria de edad ${edadMayoria} años`);
+        console.log(`Años para cumplir 100 años es:  ${edadTranscurrida} años`);
+        edadTranscurrida = 0 - edad;
+    } else {
+        edadMayoria = 1;
+        edadTranscurrida = edad;
+    }
     console.log(`Your secret is ${secrets}!`)
 } catch (error) {
     core.setFailed(`Action failed with error: ${error.message}`);
